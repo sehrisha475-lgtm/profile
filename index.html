@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sehrish Fatima — Sociology Researcher</title>
+<meta name="description" content="Sehrish Fatima — Sociology researcher from Gilgit-Baltistan, Pakistan. Gender & society, community development, indigenous knowledge.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
+<style>
+
+  /* ============ TOKENS — Fiverr-style palette ============ */
+  :root{
+    --green:       #1DBF73;
+    --green-dark:  #19A463;
+    --green-deep:  #0E6B44;
+    --green-tint:  #E4F9F0;
+    --green-tint2: #EFFBF6;
+
+    --ink:      #222325;   /* headings */
+    --text:     #404145;   /* body copy */
+    --text-mute:#62646A;
+    --border:   #E4E5E7;
+    --bg:       #FFFFFF;
+    --bg-alt:   #F7F7F8;
+    --gold:     #FFB33E;   /* rating-star gold, used sparingly for badges */
+
+    --serif: "DM Serif Display", Georgia, serif;
+    --sans:  "DM Sans", -apple-system, "Segoe UI", sans-serif;
+
+    --max: 1120px;
+    --pad: clamp(20px, 5vw, 56px);
+    --radius: 12px;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  ul{ list-style:none; }
+  ::selection{ background:var(--green-tint); color:var(--green-deep); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.01ms !important; transition-duration:0.01ms !important; scroll-behavior:auto !important; }
+  }
+  :focus-visible{ outline:2px solid var(--green); outline-offset:3px; }
+
+  .wrap{ max-width:var(--max); margin:0 auto; padding-left:var(--pad); padding-right:var(--pad); }
+
+  h1,h2,h3{ font-family:var(--serif); font-weight:400; color:var(--ink); letter-spacing:-0.01em; }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:0.78rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
+    color:var(--green-deep); background:var(--green-tint);
+    padding:6px 14px; border-radius:20px;
+  }
+  .eyebrow::before{ content:"●"; font-size:0.5rem; color:var(--green); }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    font-family:var(--sans); font-weight:700; font-size:0.95rem;
+    padding:13px 26px; border-radius:6px; text-decoration:none;
+    cursor:pointer; border:1.5px solid transparent; transition:all .18s ease;
+  }
+  .btn-primary{ background:var(--green); color:#fff; }
+  .btn-primary:hover{ background:var(--green-dark); }
+  .btn-outline{ background:transparent; color:var(--ink); border-color:var(--border); }
+  .btn-outline:hover{ border-color:var(--ink); }
+
+  /* ============ NAV ============ */
+  nav{
+    position:sticky; top:0; z-index:50; background:#fff;
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{
+    max-width:var(--max); margin:0 auto; padding:16px var(--pad);
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-mark{
+    font-family:var(--serif); font-size:1.4rem; color:var(--ink); text-decoration:none;
+  }
+  .nav-mark span{ color:var(--green); }
+  .nav-links{
+    display:flex; gap:30px; align-items:center;
+    font-size:0.92rem; font-weight:500;
+  }
+  .nav-links a:not(.btn){ text-decoration:none; color:var(--text); transition:color .15s; }
+  .nav-links a:not(.btn):hover{ color:var(--green-deep); }
+  .nav-toggle{ display:none; background:none; border:none; cursor:pointer; padding:6px; }
+  .nav-toggle span{ display:block; width:22px; height:2px; background:var(--ink); margin:5px 0; }
+
+  @media (max-width:820px){
+    .nav-links{
+      position:fixed; inset:65px 0 auto 0; background:#fff;
+      flex-direction:column; align-items:flex-start; gap:0; padding:8px var(--pad) 20px;
+      border-bottom:1px solid var(--border);
+      transform:translateY(-8px); opacity:0; pointer-events:none;
+      transition:transform .25s ease, opacity .25s ease;
+    }
+    .nav-links.open{ transform:translateY(0); opacity:1; pointer-events:auto; }
+    .nav-links li{ width:100%; padding:12px 0; border-top:1px solid var(--border); }
+    .nav-links .btn{ margin-top:12px; width:100%; }
+    .nav-toggle{ display:block; }
+  }
+
+  /* ============ HERO ============ */
+  .hero{ background:linear-gradient(180deg, var(--green-tint2) 0%, #fff 78%); padding:64px 0 0; }
+  .hero .wrap{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:48px; align-items:center; padding-bottom:56px;
+  }
+  .hero h1{ font-size:clamp(2.2rem,5vw,3.4rem); line-height:1.08; margin-bottom:18px; }
+  .hero h1 em{ font-style:italic; color:var(--green-deep); }
+  .hero p.lead{ color:var(--text-mute); font-size:1.05rem; max-width:52ch; margin-bottom:26px; }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:30px;}
+  .hero-badges{ display:flex; gap:10px; flex-wrap:wrap; }
+  .mini-badge{
+    display:flex; align-items:center; gap:6px; font-size:0.82rem; color:var(--text-mute);
+    background:#fff; border:1px solid var(--border); padding:7px 12px; border-radius:20px;
+  }
+  .mini-badge b{ color:var(--ink); }
+
+  /* profile card, Fiverr seller-card style */
+  .profile-card{
+    background:#fff; border:1px solid var(--border); border-radius:16px;
+    padding:28px; box-shadow:0 12px 30px -14px rgba(30,45,40,0.18);
+    text-align:center;
+  }
+  .avatar-ring{
+    width:120px; height:120px; border-radius:50%; margin:0 auto 16px;
+    padding:4px; background:linear-gradient(135deg, var(--green), var(--green-tint));
+  }
+  .avatar-ring img{ width:100%; height:100%; border-radius:50%; object-fit:cover; border:3px solid #fff; }
+  .profile-card h3{ font-size:1.3rem; margin-bottom:2px; }
+  .profile-card .role{ color:var(--text-mute); font-size:0.9rem; margin-bottom:16px; }
+  .profile-card .verified{
+    display:inline-flex; align-items:center; gap:5px; font-size:0.78rem; font-weight:700;
+    color:var(--green-deep); background:var(--green-tint); padding:4px 10px; border-radius:20px; margin-bottom:18px;
+  }
+  .profile-meta{ text-align:left; border-top:1px solid var(--border); padding-top:16px; }
+  .profile-meta .row{ display:flex; justify-content:space-between; font-size:0.86rem; padding:7px 0; }
+  .profile-meta .row span:first-child{ color:var(--text-mute); }
+  .profile-meta .row span:last-child{ color:var(--ink); font-weight:600; }
+
+  /* ============ STATS STRIP ============ */
+  .stats{ border-bottom:1px solid var(--border); border-top:1px solid var(--border); background:#fff; }
+  .stats .wrap{ display:grid; grid-template-columns:repeat(4,1fr); }
+  .stat{ text-align:center; padding:28px 12px; border-left:1px solid var(--border); }
+  .stat:first-child{ border-left:none; }
+  .stat .num{ font-family:var(--serif); font-size:2rem; color:var(--green-deep); }
+  .stat .lbl{ font-size:0.8rem; color:var(--text-mute); text-transform:uppercase; letter-spacing:0.04em; margin-top:4px; }
+  @media (max-width:700px){ .stats .wrap{ grid-template-columns:repeat(2,1fr); } .stat{ border-left:none; border-top:1px solid var(--border); } .stat:nth-child(1),.stat:nth-child(2){ border-top:none; } }
+
+  /* ============ SECTION SHELLS ============ */
+  section{ padding:76px 0; }
+  .section-head{ text-align:center; max-width:640px; margin:0 auto 44px; }
+  .section-head .eyebrow{ margin-bottom:14px; }
+  .section-head h2{ font-size:clamp(1.7rem,3.4vw,2.3rem); }
+  .section-head p{ color:var(--text-mute); margin-top:10px; }
+  .section-alt{ background:var(--bg-alt); }
+
+  /* ============ SERVICE / GIG CARDS ============ */
+  .gig-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:22px; }
+  .gig-card{
+    background:#fff; border:1px solid var(--border); border-radius:var(--radius);
+    padding:26px 24px; transition:box-shadow .2s, transform .2s;
+  }
+  .gig-card:hover{ box-shadow:0 14px 30px -16px rgba(30,45,40,0.22); transform:translateY(-3px); }
+  .gig-icon{
+    width:46px; height:46px; border-radius:10px; background:var(--green-tint);
+    display:flex; align-items:center; justify-content:center; margin-bottom:16px;
+    color:var(--green-deep); font-size:1.3rem; font-weight:700; font-family:var(--serif);
+  }
+  .gig-card h3{ font-family:var(--sans); font-weight:700; font-size:1.05rem; color:var(--ink); margin-bottom:8px; }
+  .gig-card p{ color:var(--text-mute); font-size:0.92rem; }
+
+  /* ============ ABOUT / SUMMARY ============ */
+  .about-box{
+    background:#fff; border:1px solid var(--border); border-radius:16px; padding:40px;
+    display:grid; grid-template-columns:auto 1fr; gap:22px; align-items:flex-start;
+  }
+  .about-box .mark{ font-family:var(--serif); font-size:3.4rem; color:var(--green); line-height:0.6; }
+  .about-box p{ font-size:1.1rem; color:var(--ink); line-height:1.6; }
+
+  /* ============ EDUCATION ============ */
+  .edu-card{
+    background:#fff; border:1px solid var(--border); border-radius:var(--radius);
+    padding:30px; display:grid; grid-template-columns:120px 1fr; gap:26px;
+  }
+  .edu-year{ font-weight:700; color:var(--green-deep); font-size:0.95rem; }
+  .edu-body h3{ font-family:var(--sans); font-weight:700; font-size:1.2rem; color:var(--ink); margin-bottom:4px; }
+  .edu-inst{ color:var(--text-mute); font-size:0.92rem; margin-bottom:14px; }
+  .edu-inst a{ color:var(--green-deep); text-decoration:none; border-bottom:1px solid var(--green-tint); }
+  .cgpa{
+    display:inline-block; font-size:0.8rem; font-weight:700;
+    background:var(--green-tint); color:var(--green-deep); padding:4px 12px; border-radius:20px; margin-bottom:16px;
+  }
+  .thesis{ background:var(--bg-alt); border-left:3px solid var(--green); padding:18px 22px; margin-bottom:18px; border-radius:0 8px 8px 0; }
+  .thesis .label{ font-size:0.72rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-mute); margin-bottom:6px; }
+  .thesis p{ font-family:var(--serif); font-size:1.05rem; color:var(--ink); }
+  .courses{ display:flex; flex-wrap:wrap; gap:8px; }
+  .pill{ font-size:0.78rem; color:var(--text); background:var(--bg-alt); border:1px solid var(--border); padding:5px 12px; border-radius:20px; }
+
+  /* ============ PUBLICATIONS ============ */
+  .pub{
+    background:#fff; border:1px solid var(--border); border-radius:var(--radius);
+    padding:24px 26px; display:flex; gap:18px; margin-bottom:16px;
+  }
+  .pub-check{
+    flex-shrink:0; width:34px; height:34px; border-radius:50%; background:var(--green-tint);
+    color:var(--green-deep); display:flex; align-items:center; justify-content:center; font-weight:700;
+  }
+  .pub-title{ font-family:var(--sans); font-weight:700; font-size:1.02rem; color:var(--ink); margin-bottom:6px; }
+  .pub-meta{ color:var(--text-mute); font-size:0.88rem; }
+  .pub-meta a{ color:var(--green-deep); text-decoration:none; border-bottom:1px solid var(--green-tint); word-break:break-word; }
+  .status{ display:inline-block; font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; padding:3px 9px; border-radius:20px; margin-left:8px; vertical-align:1px; }
+  .status.progress{ background:#FFF3DF; color:#9A6A17; }
+  .status.published{ background:var(--green-tint); color:var(--green-deep); }
+
+  /* ============ EXPERIENCE ============ */
+  .timeline{ position:relative; padding-left:30px; }
+  .timeline::before{ content:""; position:absolute; left:6px; top:8px; bottom:8px; width:2px; background:var(--border); }
+  .tl-item{ position:relative; padding-bottom:34px; }
+  .tl-item:last-child{ padding-bottom:0; }
+  .tl-item::before{ content:""; position:absolute; left:-30px; top:5px; width:14px; height:14px; border-radius:50%; background:var(--green); border:3px solid var(--green-tint); }
+  .tl-card{ background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:22px 24px; }
+  .tl-dates{ font-size:0.8rem; font-weight:700; color:var(--green-deep); margin-bottom:4px; }
+  .tl-role{ font-family:var(--sans); font-weight:700; font-size:1.08rem; color:var(--ink); }
+  .tl-org{ color:var(--text-mute); font-size:0.9rem; margin-bottom:12px; }
+  .tl-card ul{ padding-left:18px; list-style:disc; color:var(--text); font-size:0.92rem; }
+  .tl-card li{ margin-bottom:5px; }
+
+  /* ============ SKILLS ============ */
+  .skills-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:30px; }
+  .skill-card{ background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:26px; }
+  .skill-card h3{ font-family:var(--sans); font-weight:700; font-size:0.98rem; color:var(--ink); margin-bottom:16px; }
+  .bar-row{ margin-bottom:14px; }
+  .bar-row:last-child{ margin-bottom:0; }
+  .bar-row .label-row{ display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:6px; }
+  .bar-row .label-row span:last-child{ color:var(--text-mute); font-size:0.78rem; font-weight:600; }
+  .bar-track{ height:7px; background:var(--bg-alt); border-radius:6px; overflow:hidden; }
+  .bar-fill{ height:100%; background:var(--green); border-radius:6px; }
+  .tag-wrap{ display:flex; flex-wrap:wrap; gap:8px; }
+
+  /* ============ TWO COL LISTS ============ */
+  .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+  .list-card{ background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:28px; }
+  .list-card h3{ font-family:var(--sans); font-weight:700; font-size:1rem; color:var(--ink); margin-bottom:16px; }
+  .flat-list li{ padding:11px 0; border-top:1px solid var(--border); font-size:0.92rem; display:flex; gap:10px; color:var(--text); }
+  .flat-list li:first-child{ border-top:none; }
+  .flat-list li::before{ content:"✓"; color:var(--green); font-weight:700; flex-shrink:0; }
+
+  @media (max-width:760px){
+    .hero .wrap{ grid-template-columns:1fr; }
+    .edu-card{ grid-template-columns:1fr; }
+    .two-col{ grid-template-columns:1fr; }
+  }
+
+  /* ============ REFERENCES ============ */
+  .ref-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; }
+  .ref-card{ background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:26px; }
+  .ref-quote{ color:var(--green); font-family:var(--serif); font-size:2rem; line-height:0.5; display:block; margin-bottom:10px; }
+  .ref-card h3{ font-family:var(--sans); font-weight:700; font-size:1.02rem; color:var(--ink); }
+  .ref-card .ref-title{ color:var(--text-mute); font-size:0.85rem; margin:4px 0 14px; }
+  .ref-card .ref-contact{ font-size:0.85rem; color:var(--green-deep); line-height:1.9; }
+  .ref-card .ref-contact a{ color:inherit; text-decoration:none; }
+
+  /* ============ CTA BANNER ============ */
+  .cta-banner{ background:var(--green); color:#fff; padding:64px 0; text-align:center; }
+  .cta-banner h2{ color:#fff; font-size:clamp(1.6rem,3.4vw,2.3rem); margin-bottom:14px; }
+  .cta-banner p{ color:var(--green-tint2); margin-bottom:28px; }
+  .cta-banner .btn-outline{ border-color:#fff; color:#fff; }
+  .cta-banner .btn-outline:hover{ background:#fff; color:var(--green-deep); }
+  .cta-banner .btn-primary{ background:#fff; color:var(--green-deep); }
+  .cta-banner .btn-primary:hover{ background:var(--green-tint2); }
+
+  /* ============ FOOTER ============ */
+  footer{ background:var(--ink); color:#B7B9BD; padding:40px 0; }
+  footer .wrap{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; align-items:center; }
+  footer .foot-name{ font-family:var(--serif); color:#fff; font-size:1.1rem; }
+  footer .foot-links{ display:flex; gap:22px; font-size:0.85rem; }
+  footer a{ text-decoration:none; color:#B7B9BD; }
+  footer a:hover{ color:var(--green); }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">Sehrish<span>.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Expertise</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact" class="btn btn-primary">Get In Touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Available for research collaboration</span>
+      <h1>Sociology research,<br><em>grounded in community.</em></h1>
+      <p class="lead">I'm Sehrish Fatima — a sociology researcher from Gilgit-Baltistan, Pakistan, studying gender, culture and community development, from published research to the classroom.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        <a href="#publications" class="btn btn-outline">View Publications</a>
+      </div>
+      <div class="hero-badges">
+        <span class="mini-badge">🎓 <b>CGPA 3.86/4.00</b> — KIU Gilgit</span>
+        <span class="mini-badge">📄 <b>2</b> Publications</span>
+        <span class="mini-badge">🌍 <b>English &amp; Urdu</b></span>
+      </div>
+    </div>
+
+    <div class="profile-card">
+      <div class="avatar-ring"><img src="assets/sehrish.jpg" alt="Portrait of Sehrish Fatima"></div>
+      <h3>Sehrish Fatima</h3>
+      <div class="role">Sociology Researcher</div>
+      <span class="verified">✓ BS (Hons) Sociology, KIU</span>
+      <div class="profile-meta">
+        <div class="row"><span>Location</span><span>Gilgit, Pakistan</span></div>
+        <div class="row"><span>Focus areas</span><span>Gender &amp; Society</span></div>
+        <div class="row"><span>Languages</span><span>Urdu, English</span></div>
+        <div class="row"><span>Email</span><span>sehrishfatima.kiu@gmail.com</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="num">3.86</div><div class="lbl">CGPA / 4.00</div></div>
+    <div class="stat"><div class="num">2</div><div class="lbl">Publications</div></div>
+    <div class="stat"><div class="num">2</div><div class="lbl">Research Areas</div></div>
+    <div class="stat"><div class="num">4+</div><div class="lbl">Years in Academia</div></div>
+  </div>
+</div>
+
+<main>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">About</span>
+        <h2>What drives my research</h2>
+      </div>
+      <div class="about-box">
+        <span class="mark">&#8220;</span>
+        <p>I am seeking a Master's by Research in sociology to deepen my understanding of cultural dynamics and contribute to meaningful societal change &#8212; analyzing social structures, questioning established norms, and addressing pressing cultural issues alongside experienced researchers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Expertise</span>
+        <h2>Where I can add value</h2>
+        <p>Research interests and practical skills built across fieldwork, publishing and teaching.</p>
+      </div>
+      <div class="gig-grid">
+        <div class="gig-card">
+          <div class="gig-icon">G</div>
+          <h3>Gender &amp; Society Research</h3>
+          <p>Social and cultural factors affecting women, youth, and marginalized groups.</p>
+        </div>
+        <div class="gig-card">
+          <div class="gig-icon">C</div>
+          <h3>Community Development</h3>
+          <p>Impact of education, awareness, and youth mobilization on social change.</p>
+        </div>
+        <div class="gig-card">
+          <div class="gig-icon">F</div>
+          <h3>Field Research</h3>
+          <p>Field-based sociological study, including work on indigenous knowledge and environmental conservation.</p>
+        </div>
+        <div class="gig-card">
+          <div class="gig-icon">D</div>
+          <h3>Data Analysis</h3>
+          <p>Intermediate proficiency in SPSS, MAXQDA, and Mendeley for qualitative and quantitative analysis.</p>
+        </div>
+        <div class="gig-card">
+          <div class="gig-icon">T</div>
+          <h3>Teaching &amp; Mentorship</h3>
+          <p>Sociology lecturing and mentoring students in leadership and research skills.</p>
+        </div>
+        <div class="gig-card">
+          <div class="gig-icon">P</div>
+          <h3>Academic Writing</h3>
+          <p>Peer-reviewed publishing experience, from thesis research to journal articles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Education</span>
+        <h2>Academic background</h2>
+      </div>
+      <div class="edu-card">
+        <div class="edu-year">2019<br>&#8211;2023</div>
+        <div class="edu-body">
+          <h3>BS (Hons) Sociology</h3>
+          <div class="edu-inst"><a href="https://www.kiu.edu.pk/" target="_blank" rel="noopener">Karakorum International University</a>, Gilgit, Pakistan</div>
+          <span class="cgpa">CGPA 3.86 / 4.00</span>
+          <div class="thesis">
+            <div class="label">Bachelor's Thesis</div>
+            <p>&#8220;Role of Indigenous Wisdom in Environmental Conservation: A Sociological Study in Haramosh Valley, Gilgit, Pakistan.&#8221;</p>
+          </div>
+          <div class="courses">
+            <span class="pill">Social Research</span>
+            <span class="pill">Social Inequality</span>
+            <span class="pill">Environmental Sociology</span>
+            <span class="pill">Sociology of Gender</span>
+            <span class="pill">Rural Sociology</span>
+            <span class="pill">Sociology of Family</span>
+            <span class="pill">Contemporary Sociological Theories</span>
+            <span class="pill">Sociology of Community</span>
+            <span class="pill">Urban Sociology</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications" class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Publications</span>
+        <h2>Research output</h2>
+      </div>
+
+      <div class="pub">
+        <div class="pub-check">1</div>
+        <div>
+          <div class="pub-title">Exploring the Socio-Cultural Dimensions of Female Suicide in Yasin District Ghizer: Perspectives of Influential Stakeholders <span class="status published">Published 2025</span></div>
+          <div class="pub-meta">Abbas, N., Nosheen, F., Fatima, S., Barkat Ali, W., &amp; Zahra, S. &#183; The Critical Review of Social Sciences Studies, 3(1), 385&#8211;396 &#183; <a href="https://thecrsss.com/index.php/Journal/article/view/157" target="_blank" rel="noopener">thecrsss.com</a></div>
+        </div>
+      </div>
+
+      <div class="pub">
+        <div class="pub-check">2</div>
+        <div>
+          <div class="pub-title">Role of Indigenous Wisdom in Environmental Conservation: A Sociological Study in Haramosh Valley, Gilgit <span class="status progress">In process</span></div>
+          <div class="pub-meta">Based on Bachelor's thesis research</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Experience</span>
+        <h2>Professional experience</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-dates">05/2024 &#8211; Onward</div>
+            <div class="tl-role">College Lecturer</div>
+            <div class="tl-org">Al Mustafa Public School and College</div>
+            <ul>
+              <li>Delivers comprehensive sociology lectures</li>
+              <li>Creates a socially proactive environment for students' social development</li>
+              <li>Builds students' research skills through class projects</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-dates">03/2023 &#8211; 03/2024</div>
+            <div class="tl-role">Vice Principal &amp; Teacher</div>
+            <div class="tl-org">North Beacon House School &amp; College, Danyore</div>
+            <ul>
+              <li>Led academic and administrative operations for the school and college</li>
+              <li>Delivered engaging sociology lectures, fostering critical thinking and analytical skills</li>
+              <li>Planned and organized student activities, workshops, and extra-curricular programs</li>
+              <li>Mentored students to develop leadership, social awareness, and professional skills</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-dates">08/2022 &#8211; 02/2023</div>
+            <div class="tl-role">Project Supervisor</div>
+            <div class="tl-org">Haramosh Development Organization (HDO)</div>
+            <ul>
+              <li>Supervised field teams and monitored project outcomes to ensure effective implementation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-card">
+            <div class="tl-dates">05/2020 &#8211; 07/2022</div>
+            <div class="tl-role">President, Girls Wing</div>
+            <div class="tl-org">State Youth Parliament, District Gilgit</div>
+            <ul>
+              <li>Led youth programs focused on advocacy, gender equality, and social integration</li>
+              <li>Represented the girls' wing in district-level policy discussions and community projects</li>
+              <li>Initiated awareness campaigns to promote civic engagement among young women</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Skills</span>
+        <h2>Tools of the trade</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Software</h3>
+          <div class="bar-row"><div class="label-row"><span>MS Office Suite</span><span>Proficient</span></div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+          <div class="bar-row"><div class="label-row"><span>SPSS</span><span>Intermediate</span></div><div class="bar-track"><div class="bar-fill" style="width:65%"></div></div></div>
+          <div class="bar-row"><div class="label-row"><span>MAXQDA</span><span>Intermediate</span></div><div class="bar-track"><div class="bar-fill" style="width:65%"></div></div></div>
+          <div class="bar-row"><div class="label-row"><span>Mendeley</span><span>Intermediate</span></div><div class="bar-track"><div class="bar-fill" style="width:65%"></div></div></div>
+        </div>
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <div class="bar-row"><div class="label-row"><span>Urdu</span><span>Native</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
+          <div class="bar-row"><div class="label-row"><span>English</span><span>Fluent</span></div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div></div>
+        </div>
+        <div class="skill-card">
+          <h3>Certificates</h3>
+          <div class="tag-wrap">
+            <span class="pill">English Language Proficiency — KIU</span>
+            <span class="pill">Three-Month Computer Course</span>
+            <span class="pill">Smart Classes &amp; Online Lectures</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="more">
+    <div class="wrap two-col">
+      <div class="list-card">
+        <h3>Conferences &amp; Workshops</h3>
+        <ul class="flat-list">
+          <li>Two-day Training: Advocacy &amp; Security for Human Rights Defenders</li>
+          <li>One-day Workshop: Women Empowerment &amp; Gender Equality Recognition Award, 2024</li>
+          <li>National Conference: Role of Dukhtaran-e-Pakistan in Peace Building &#8212; Islamabad, 2020</li>
+          <li>G3 Summit &#8212; CINA Study Center, IBA Lahore, 2022</li>
+          <li>International Conference: CPEC Belt and Road Initiative &#8212; Ministry of Planning, Pakistan</li>
+        </ul>
+      </div>
+      <div class="list-card">
+        <h3>Awards &amp; Affiliations</h3>
+        <ul class="flat-list">
+          <li>Gilgit Baltistan Directorate Scholarship</li>
+          <li>Marfie Foundation Scholarship Scheme</li>
+          <li>Ehsaas Scholarship (awarded each semester) &#8212; KIU, Gilgit</li>
+          <li>Member, International Relations Readers Society Pakistan</li>
+          <li>Member, KIU Debating Society</li>
+          <li>Moderator, Gilgit Baltistan Youth Literary Society</li>
+          <li>Media In-Charge, Haramosh Student Organization</li>
+          <li>Member, KIU Sports Society</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="references" class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">References</span>
+        <h2>Referees</h2>
+      </div>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <span class="ref-quote">&#8220;</span>
+          <h3>Dr. Zubair Ahmed</h3>
+          <div class="ref-title">Professor, Department of Sociology &amp; Anthropology, KIU, Pakistan</div>
+          <div class="ref-contact"><a href="mailto:zubair.ahmed@gmail.com">zubair.ahmed@gmail.com</a><br>+92 0333 573025</div>
+        </div>
+        <div class="ref-card">
+          <span class="ref-quote">&#8220;</span>
+          <h3>Dr. Jaffar Amman</h3>
+          <div class="ref-title">Professor, Department of Sociology &amp; Anthropology, KIU, Gilgit, Pakistan</div>
+          <div class="ref-contact"><a href="mailto:jaffar.aman@kiu.edu.pk">jaffar.aman@kiu.edu.pk</a><br>+92 03138855509</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="cta-banner" id="contact">
+  <div class="wrap">
+    <h2>Let's work together</h2>
+    <p>Open to research collaboration, teaching opportunities, and Master's supervision.</p>
+    <a href="mailto:sehrishfatima.kiu@gmail.com" class="btn btn-primary">sehrishfatima.kiu@gmail.com</a>
+    <a href="tel:+923554309200" class="btn btn-outline">+92&#8209;355&#8209;4309200</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-name">Sehrish Fatima</div>
+    <div class="foot-links">
+      <a href="mailto:sehrishfatima.kiu@gmail.com">Email</a>
+      <a href="tel:+923554309200">Phone</a>
+      <a href="#top">Back to top &#8593;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', false);
+  }));
+</script>
+
+</body>
+</html>
